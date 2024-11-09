@@ -9,16 +9,18 @@ class Solution:
         if not node:
             return 0
             
-        leftDepth = self.getDepth(node.left)
-        rightDepth = self.getDepth(node.right)
+        # leftDepth = self.getDepth(node.left)
+        # rightDepth = self.getDepth(node.right)
 
         if node.left is None and node.right is not None:
-            return 1 + rightDepth
+            # return 1 + rightDepth
+            return 1 + self.getDepth(node.right)
         
         if node.right is None and node.left is not None:
-            return 1 + leftDepth
+            # return 1 + leftDepth
+            return 1 + self.getDepth(node.left)
         
-        return 1 + min(leftDepth, rightDepth)
+        return 1 + min(self.getDepth(node.left), self.getDepth(node.right))
 
     def minDepth(self, root: Optional[TreeNode]) -> int:
         return self.getDepth(root)
