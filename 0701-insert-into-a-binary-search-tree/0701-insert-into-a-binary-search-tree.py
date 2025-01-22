@@ -25,7 +25,7 @@ class Solution:
             self.traversal(cur.right, val)
 
     def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        self.parent = TreeNode(0)
+        #self.parent = TreeNode(0)
         if root is None:
             return TreeNode(val)
         self.traversal(root, val)
