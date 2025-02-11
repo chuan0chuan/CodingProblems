@@ -10,6 +10,7 @@ class Solution:
         return "".join(result)
 
     def find_part_inend(self,result, part, length):
+        last =result[-length:]
         return "".join(result[-length:]) == part
 
 
