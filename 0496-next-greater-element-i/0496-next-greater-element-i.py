@@ -7,6 +7,8 @@ class Solution:
                 if nums2[stack[-1]] in nums1:
                     index = nums1.index(nums2[stack[-1]])
                     result[index] = nums2[i]
+                    #solved under while conditoion for stack[-1]
                 stack.pop()
+            #not solved for new i, so append to stack
             stack.append(i)
         return result
