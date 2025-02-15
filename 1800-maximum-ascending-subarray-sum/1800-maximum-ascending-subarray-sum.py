@@ -8,6 +8,6 @@ class Solution:
             else:
                 cur_sum = nums[i]
 
-            ans = max(cur_sum, max_sum)
-            
-        return ans
+            max_sum = max(cur_sum, max_sum)
+
+        return max_sum
