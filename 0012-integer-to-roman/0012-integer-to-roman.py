@@ -31,5 +31,5 @@ class Solution:
                 char = one + ten  # 9 变成 IX, XC, CM
 
             result.append(char)  # 把当前位的罗马数字加入结果
-
-        return "".join(result[::-1])  # 逆序拼接，保证罗马数字从高位到低位
+        result.reverse()
+        return "".join(result)  # 逆序拼接，保证罗马数字从高位到低位
