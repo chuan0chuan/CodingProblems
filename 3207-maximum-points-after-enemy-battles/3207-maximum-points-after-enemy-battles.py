@@ -6,5 +6,6 @@ class Solution:
         if currentEnergy < enemyEnergies[0]:
             return point
         totalEnergy = currentEnergy
-        for j in range(len(enemyEnergies) - 1, 0, -1): totalEnergy += enemyEnergies[j]
+        for j in range(len(enemyEnergies) - 1, 0, -1): 
+            totalEnergy += enemyEnergies[j]
         return totalEnergy // enemyEnergies[0]
