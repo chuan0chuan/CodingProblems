@@ -1,5 +1,4 @@
 class Twitter:
-
     def __init__(self):
         self.userPosts = defaultdict(list)
         self.timestamp = 0
