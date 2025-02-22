@@ -14,9 +14,10 @@ class Solution:
         dummy = ListNode(0)
         current = dummy
         while heap:
-            val , idx ,node = heapq.heappop(heap)
+            val, idx ,node = heapq.heappop(heap)
             current.next = node
             current = current.next
             if node.next:
                 heapq.heappush(heap, (node.next.val, idx, node.next))
+
         return dummy.next
