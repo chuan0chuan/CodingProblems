@@ -10,6 +10,6 @@ class Solution:
             k = k - 1
             if k == 0:
                 return val
-            if colIdx < len(matrix) -1 :
+            elif colIdx < len(matrix) -1 :
                 heapq.heappush(heap, (matrix[rowIdx][colIdx + 1], rowIdx , colIdx + 1))
             
