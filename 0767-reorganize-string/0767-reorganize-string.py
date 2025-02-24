@@ -3,9 +3,7 @@ class Solution:
         freqMap = defaultdict(int)
         for c in s:
             freqMap[c] += 1
-        max_freq = max(freqMap.values())
-        if max_freq > (len(s) + 1) // 2:
-            return ""  # 直接返回，无法重组
+      
         result = ""
         max_heap = []
         for key, val in freqMap.items():
@@ -33,4 +31,4 @@ class Solution:
         if max_heap:
             result += heapq.heappop(max_heap)[1]
 
-        return result
+        return result if len(result) == len(s) else ""
