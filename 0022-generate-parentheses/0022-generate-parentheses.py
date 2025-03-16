@@ -4,14 +4,20 @@ class Solution:
         if n == 0:
             return res
         
-        def backTrack( s, l, r):
-            if len(s) == 2 * n :
-                return res.append(s)
+        def backTrack(path, leftAddedSoFar, rightAddedSoFar):
+            if len(path) == 2 * n:
+                res.append("".join(path))  # 把列表转换成字符串并加入结果集
+                return
             
-            if l< n :
-                backTrack(s + '(', l + 1, r)
-            if r < l:
-                backTrack(s + ')', l , r + 1)
+            if leftAddedSoFar < n:
+                path.append('(')  # 选择加入左括号
+                backTrack(path, leftAddedSoFar + 1, rightAddedSoFar)
+                path.pop()  # 回溯（撤销选择）
+
+            if rightAddedSoFar < leftAddedSoFar:
+                path.append(')')  # 选择加入右括号
+                backTrack(path, leftAddedSoFar, rightAddedSoFar + 1)
+                path.pop()  # 回溯（撤销选择）
         
-        backTrack('', 0,0)
+        backTrack([], 0, 0)
         return res
