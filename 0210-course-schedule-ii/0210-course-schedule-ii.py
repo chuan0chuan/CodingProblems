@@ -21,4 +21,4 @@ class Solution:
         if len(result) == numCourses:
             return result
         else:
-            []
+            return []
