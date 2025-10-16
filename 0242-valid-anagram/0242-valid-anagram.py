@@ -1,14 +1,14 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        record = [0] * 26
+        if len(s) != len(t):
+            return False
         
-        for i in s:
-            record[ord(i) - ord("a")] += 1
-        for i in t:
-            record[ord(i) - ord("a")] -= 1
-        
-        for i in range(26):
-            if record[i] != 0:
+        count = defaultdict(int)
+        for ch in s:
+            count[ch] += 1
+        for ch in t:
+            count[ch] -= 1
+            if count[ch] < 0:
                 return False
         
         return True
