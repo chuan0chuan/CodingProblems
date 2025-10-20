@@ -18,7 +18,6 @@ class Solution:
 
         left = self.sortList(head)
         right = self.sortList(mid)
-
         return self.merge(left, right)
     
     def merge(self, l1, l2):
