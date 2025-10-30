@@ -14,4 +14,4 @@ class Solution:
             else:
                 stack.pop()
         
-        return True if not stack else False
+        return not stack
