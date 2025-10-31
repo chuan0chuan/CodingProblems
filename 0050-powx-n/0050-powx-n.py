@@ -8,6 +8,7 @@ class Solution:
         while n > 0:
             if n % 2 == 1:
                 result *= x
+                n -= 1
             x *= x
             n //= 2
         return result
