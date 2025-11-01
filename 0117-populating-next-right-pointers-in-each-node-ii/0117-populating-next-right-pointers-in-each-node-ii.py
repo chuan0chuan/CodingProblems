@@ -16,7 +16,7 @@ class Solution:
         q = deque([root])
         while q:
             size = len(q)
-            prev =None
+            prev = None
             for _ in range(size):
                 node = q.popleft()
                 if prev:
