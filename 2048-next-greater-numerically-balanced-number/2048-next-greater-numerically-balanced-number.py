@@ -1,7 +1,3 @@
-nums = []
-generate(0, [0]*10, nums)
-nums.sort()
-
 def generate(num: int, count: list[int], nums: list[int]) -> None:
     if num > 0 and is_beautiful(count):
         nums.append(num)
@@ -20,6 +16,9 @@ def is_beautiful(count: list[int]) -> bool:
             return False
     return True
 
+nums = []
+generate(0, [0]*10, nums)
+nums.sort()
 
 class Solution:    
     def nextBeautifulNumber(self, n: int) -> int:
