@@ -23,4 +23,5 @@ class Solution:
             copy.next = hash[cur.next]
             copy.random = hash[cur.random]
             cur = cur.next
+            
         return hash[head]
