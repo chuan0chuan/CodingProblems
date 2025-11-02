@@ -11,6 +11,6 @@ class Solution:
             if not result or result[-1][1] < intervals[i][0]:
                 result.append(intervals[i])
             else:
-                result[-1][1] = max(result[-1][1], intervals[i][1])
+                result[-1][1] = max(intervals[i][1],result[-1][1])
         
         return result
