@@ -22,4 +22,4 @@ class Solution:
         for col, row, val in nodes:
             res[col].append(val)
         
-        return [ res[c] for c in sorted(res)]
+        return [ res[c] for c in res]
