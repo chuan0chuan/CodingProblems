@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self, key, value):
+    def __init__(self, key, val):
         self.key = key
-        self.value = value
+        self.val = val
         self.prev = None
         self.next = None
 
@@ -13,17 +13,16 @@ class LRUCache:
         self.tail = Node(0,0)
         self.head.next = self.tail
         self.tail.prev = self.head
+    
+    def _remove(self, node: Node):
+        prev, nxt = node.prev, node.next
+        prev.next = nxt
+        nxt.prev = prev
 
-    def _remove(self, node:Node):
-        before, after = node.prev, node.next
-        before.next = after
-        after.prev = before
-
-    def _add_to_head(self, node:Node):
-        first = self.head.next
-        node.prev =self.head
-        node.next = first
-        first.prev = node
+    def _add_to_head(self, node: Node):
+        node.next = self.head.next
+        node.prev = self.head
+        self.head.next.prev = node
         self.head.next = node
 
     def get(self, key: int) -> int:
@@ -32,23 +31,22 @@ class LRUCache:
         node = self.cache[key]
         self._remove(node)
         self._add_to_head(node)
-        return node.value
+        return node.val
 
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             node = self.cache[key]
-            node.value = value
+            node.val = val
             self._remove(node)
             self._add_to_head(node)
         else:
-            if len(self.cache) >= self.capacity:
+            node = Node(key,value)
+            self.cache[key] = node
+            self._add_to_head(node)
+            if len(self.cache) > self.capacity:
                 lru = self.tail.prev
                 self._remove(lru)
                 del self.cache[lru.key]
-
-            new_node = Node(key, value)
-            self.cache[key] = new_node
-            self._add_to_head(new_node)
         
 
 
