@@ -11,5 +11,6 @@ class Solution:
                 return True
             
             counter[c] +=1
+            
         return False
         
