@@ -9,15 +9,14 @@ class Solution:
         for i in range(len(lists)):
             node = lists[i]
             if node:
-                heapq.heappush(heap, (node.val , i, node))
+                heapq.heappush(heap, (node.val, i, node))
         
         dummy = ListNode(0)
-        current = dummy
+        cur  = dummy
         while heap:
-            val, idx ,node = heapq.heappop(heap)
-            current.next = node
-            current = current.next
+            val, index, node = heapq.heappop(heap)
+            cur.next = node
+            cur = cur.next
             if node.next:
-                heapq.heappush(heap, (node.next.val, idx, node.next))
-
+                heapq.heappush(heap, (node.next.val, index, node.next))
         return dummy.next
