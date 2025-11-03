@@ -5,13 +5,13 @@ class Solution:
         nums = 0
         for ch in s:
             if ch.isdigit():
-                nums = nums * 10 + int(ch)
+                nums = int(ch) + nums *10
             elif ch == '[':
                 stack.append((cur_str, nums))
                 cur_str, nums = "" , 0
             elif ch == ']':
-                prev, numtorepeat = stack.pop()
-                cur_str = prev + numtorepeat * cur_str
+                prev , repeatnum = stack.pop()
+                cur_str = prev + repeatnum * cur_str
             else:
                 cur_str += ch
         
