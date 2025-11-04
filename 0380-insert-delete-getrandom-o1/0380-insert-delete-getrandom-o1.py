@@ -2,7 +2,7 @@ class RandomizedSet:
     def __init__(self):
         self.nums = []
         self.pos = {}
-    
+
     def insert(self, val:int) -> bool:
         if val in self.pos:
             return False
@@ -13,12 +13,11 @@ class RandomizedSet:
     def remove(self, val: int) -> bool:
         if val not in self.pos:
             return False
-        
         idx = self.pos[val]
-        last = self.nums[-1]
+        last_val = self.nums[-1]
 
-        self.nums[idx] = last
-        self.pos[last] = idx
+        self.nums[idx] = last_val
+        self.pos[last_val] = idx
 
         self.nums.pop()
         del self.pos[val]
