@@ -4,4 +4,7 @@ class Solution:
         for vote in votes:
             for i, v in enumerate(vote):
                 count[v][i] -= 1
-        return ''.join(sorted(votes[0], key=lambda letter: count.get(letter)))
+        
+        teams = list(votes[0])
+        teams.sort(key=lambda x: count[x])
+        return ''.join(teams)
