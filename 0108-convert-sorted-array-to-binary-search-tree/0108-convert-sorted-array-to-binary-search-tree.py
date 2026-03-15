@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     # step 1 : define the para and return value of recursive function:
-    def travesal(self, nums: List[int], left, right):
+    def travesal(self, nums, left, right):
         # step 2: find the ending break condition of the function:
         if left > right:
             return None
