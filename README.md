@@ -24,6 +24,7 @@ Hi, I am recording my learning journey in data structure and algorithms here. At
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/chuan0chuan/CodingProblems/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+| [0524-longest-word-in-dictionary-through-deleting](https://github.com/chuan0chuan/CodingProblems/tree/main/0524-longest-word-in-dictionary-through-deleting/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -40,4 +41,16 @@ Hi, I am recording my learning journey in data structure and algorithms here. At
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/chuan0chuan/CodingProblems/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
+## Two Pointers
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0524-longest-word-in-dictionary-through-deleting](https://github.com/chuan0chuan/CodingProblems/tree/main/0524-longest-word-in-dictionary-through-deleting/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0524-longest-word-in-dictionary-through-deleting](https://github.com/chuan0chuan/CodingProblems/tree/main/0524-longest-word-in-dictionary-through-deleting/) | Medium |
+## Sorting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0524-longest-word-in-dictionary-through-deleting](https://github.com/chuan0chuan/CodingProblems/tree/main/0524-longest-word-in-dictionary-through-deleting/) | Medium |
 <!---LeetCode Topics End-->
